@@ -1,26 +1,61 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <header>
+      <h1>CHOCOMOON</h1>
+      <p>Bienvenido a Chocomoon, tu destino para deleitar tus sentidos con exquisitos chocolates y delicias artesanales. 
+      En Chocomoon, nos enorgullece ofrecer una amplia variedad de productos de alta calidad, desde indulgentes tabletas 
+      de chocolate amargo hasta suaves trufas de caramelo salado. Nuestro compromiso con la excelencia y la creatividad nos impulsa a crear experiencias únicas para tu paladar.</p>
+    </header>
+    <main>
+      <ProductosComponent />
+    </main>
+    <footer class="footer">
+      <p>© 2023 CHOCOMOON</p>
+      <p>Todos los derechos reservados</p>
+      <p>Email: info@chocomoon.com</p>
+    </footer>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ProductosComponent from "@/components/ProductosComponent.vue";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    ProductosComponent,
+  },
+};
 </script>
 
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+header {
+    text-align: center;
+    background-color: #292b2c; 
+    color: #ffffff; 
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.5em; 
+    margin-bottom: 10px; 
+  }
+
+  p {
+    font-size: 1.2em; 
+    line-height: 1.5;
+  }
+
+  .footer {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 10px;
+  background-color: #333; 
+  color: #fff; 
+}
+
+.footer p{
+  font-size: 1.2em; 
+    line-height: 1; 
 }
 </style>
+ 
